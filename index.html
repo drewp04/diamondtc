@@ -134,16 +134,23 @@ h1 .ital{display:block;font-style:italic;font-weight:400;color:var(--blue2);}
 .hero-card a::before{content:'→';color:var(--blue);font-size:.7rem;flex-shrink:0;}
 .hero-hrs{
   position:relative;z-index:1;
-  font-size:.65rem;
-  color:var(--bluel);
-  text-align:center;
-  letter-spacing:.12em;
-  font-weight:600;
+  display:flex;flex-direction:column;align-items:center;gap:.3rem;
   background:rgba(74,134,180,.12);
   border:1px solid rgba(74,134,180,.25);
-  padding:.5rem 1.2rem;
-  width:100%;
-  max-width:310px;
+  padding:.9rem 1.4rem;
+  width:100%;max-width:310px;
+  text-align:center;
+}
+.hero-hrs-title{
+  font-size:.52rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--bluel);font-weight:700;
+}
+.hero-hrs-time{
+  font-size:.78rem;color:white;font-weight:500;letter-spacing:.04em;
+}
+.hero-hrs-closed{
+  font-size:.6rem;color:rgba(255,255,255,.45);
+  letter-spacing:.1em;font-style:italic;
 }
 
 /* ── SHARED ── */
@@ -549,7 +556,11 @@ h3.team-name{
       <a href="tel:6614693092">661-469-3092</a>
       <a href="mailto:tc@diamondtc.net">tc@diamondtc.net</a>
     </div>
-    <p class="hero-hrs">Mon–Fri &nbsp;·&nbsp; 8 AM–5 PM &nbsp;·&nbsp; Closed Holidays</p>
+    <div class="hero-hrs">
+      <span class="hero-hrs-title">Office Hours</span>
+      <span class="hero-hrs-time">Monday – Friday &nbsp;·&nbsp; 8:00 AM – 5:00 PM</span>
+      <span class="hero-hrs-closed">Closed Weekends &amp; Holidays</span>
+    </div>
   </div>
 </section>
 
