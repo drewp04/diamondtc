@@ -143,6 +143,12 @@ footer{background:#070f17;padding:2.2rem 5rem;display:flex;align-items:center;ju
   .flyers-row{grid-template-columns:1fr 1fr;}
   .page-hero h1{font-size:2rem;}
 }
+
+/* Hamburger animation */
+.hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.is-open span:nth-child(2){opacity:0;}
+.hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.hamburger span{transition:transform .3s ease, opacity .3s ease;}
 </style>
 </head>
 <body>
@@ -319,13 +325,38 @@ footer{background:#070f17;padding:2.2rem 5rem;display:flex;align-items:center;ju
   </div>
 </footer>
 
+
 <script>
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('nav-links');
-hamburger.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', open);
-});
+// Mobile hamburger menu
+(function() {
+  var hamburger = document.getElementById('hamburger');
+  var navLinks  = document.getElementById('nav-links');
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener('click', function() {
+    var open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('is-open', open);
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.classList.remove('is-open');
+    });
+  });
+
+  // Close menu on outside click
+  document.addEventListener('click', function(e) {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.classList.remove('is-open');
+    }
+  });
+})();
 </script>
 </body>
 </html>
