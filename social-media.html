@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.diamondtc.net/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-<style>
+@media(max-width:700px){.flyers-row{grid-template-columns:1fr;max-width:420px;}}<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --navy:#0d1f2d;--steel:#1a3a52;--blue:#4a86b4;--blue2:#2d6a9f;
@@ -66,9 +66,9 @@ h3.include-title{font-size:.88rem;font-weight:700;color:var(--navy);}
 #samples{background:var(--warm);}
 .samples-intro{margin-bottom:3rem;}
 .samples-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:1.5rem;display:block;}
-.flyers-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:3rem;}
-.flyer-wrap{display:flex;flex-direction:column;gap:.6rem;}
-.flyer-img{width:100%;border-radius:4px;box-shadow:0 4px 20px rgba(0,0,0,.1);transition:transform .25s,box-shadow .25s;cursor:pointer;}
+.flyers-row{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px;margin:0 auto;}
+.flyer-wrap{display:flex;flex-direction:column;align-items:center;}
+.flyer-img{width:100%;height:auto;border-radius:12px;display:block;}
 .flyer-img:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.15);}
 .flyer-caption{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue2);font-weight:700;text-align:center;transition:color .2s;}.flyer-wrap a{text-decoration:none;}.flyer-wrap a:hover .flyer-caption{color:var(--navy);}
 .docs-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
