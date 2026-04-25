@@ -66,7 +66,7 @@ h3.include-title{font-size:.88rem;font-weight:700;color:var(--navy);}
 #samples{background:var(--warm);}
 .samples-intro{margin-bottom:3rem;}
 .samples-label{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:1.5rem;display:block;}
-.flyers-row{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px;margin:0 auto;}
+.flyers-row{display:grid !important;grid-template-columns:1fr 1fr !important;gap:2rem;max-width:900px;margin:0 auto;}
 .flyer-wrap{display:flex;flex-direction:column;align-items:center;}
 .flyer-img{width:100%;height:auto;border-radius:12px;display:block;}
 .flyer-img:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.15);}
@@ -117,7 +117,7 @@ footer{background:#070f17;padding:2.2rem 5rem;display:flex;align-items:center;ju
 .footer-info a{color:var(--blue);text-decoration:none;}
 
 /* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:700px){.flyers-row{grid-template-columns:1fr !important;max-width:420px;}}
   nav{padding:.7rem 1.2rem;}
   .nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:rgba(13,31,45,.98);flex-direction:column;padding:1.5rem 2rem;gap:1.1rem;}
   .nav-links.open{display:flex;}
@@ -258,22 +258,22 @@ footer{background:#070f17;padding:2.2rem 5rem;display:flex;align-items:center;ju
     <div class="flyer-wrap">
       <a href="sample-just-listed.html" target="_blank">
         <img class="flyer-img" src="flyer-just-listed.jpg" alt="Just Listed flyer sample">
-      <span class="flyer-caption">Just Listed →</span>
+      <span class="flyer-caption">Just Listed </span>
     </div>
     <div class="flyer-wrap">
       <a href="sample-pending.html" target="_blank">
         <img class="flyer-img" src="flyer-pending.jpg" alt="Pending flyer sample">
-      <span class="flyer-caption">Pending →</span>
+      <span class="flyer-caption">Pending </span>
     </div>
     <div class="flyer-wrap">
       <a href="sample-sold.html" target="_blank">
       <img class="flyer-img" src="flyer-sold.jpg" alt="Sold flyer sample">
-      <span class="flyer-caption">Sold →</span>
+      <span class="flyer-caption">Sold </span>
     </div>
     <div class="flyer-wrap">
       <a href="sample-open-house.html" target="_blank">
         <img class="flyer-img" src="flyer-open-house.jpg" alt="Open House flyer sample">
-      <span class="flyer-caption">Open House →</span>
+      <span class="flyer-caption">Open House </span>
     </div>
   </div>
 
